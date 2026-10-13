@@ -7,29 +7,37 @@ public class MonthlyPower {
     // a) print power usage for a month
     public static void print_PowerUsage(double[][] usage) {
 
-        // TODO
-       /* for (int i = 0; i < usage.length; i++) {
+       for (int i = 0; i < usage.length; i++) {
+            System.out.println("Månedlig strømforbruk");
             double[] day_usage = usage[i];
-
-            DailyPower.
+            System.out.print("Dag " + (i + 1) + ":");
+            DailyPower.printPowerUsage(day_usage);
+            System.out.println("");
         }
-*/
+
     }
 
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
 
-        // TODO
+        for (int i = 0; i < prices.length; i++){
+            System.out.println("Månedlig strømpriser");
+            double[] day_prices = prices[i];
+            System.out.print("Month " + (i + 1) + ":");
+            DailyPower.printPowerPrices(day_prices);
+            System.out.println("");
+
+        }
 
     }
 
     // c) compute total power usage for a month
     public static double computePowerUsage(double[][] usage) {
-
-        double sum = 0;
-
         // TODO
-
+        double sum = 0;
+        for (int i = 0; i < usage.length; i++) {
+            sum += DailyPower.computePowerUsage(usage[i]);
+        }
         return sum;
     }
 

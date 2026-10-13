@@ -4,6 +4,8 @@ import no.hvl.dat100.javel.oppgave2.MonthlyPower;
 
 import static no.hvl.dat100.javel.oppgave1.DailyPower.printPowerPrices;
 
+
+
 public class DayMain {
 
     public static void main(String[] args) {
@@ -26,16 +28,35 @@ public class DayMain {
          Remember to also to check that you get the expected results
          */
 
+        
+        System.out.println("A) Strømpriser");
+        DailyPower.printPowerPrices(powerprices_day);
+        System.out.println("");
 
-        System.out.println();
-
+        System.out.println("B) Strømforbruk");
         DailyPower.printPowerUsage(DayPowerData.powerusage_day);
+        System.out.println("");
 
-        System.out.println();
+        System.out.println("C) Total Strømforbruk");
+        System.out.println("");
+    
+        System.out.println("D) Strømpris med spotpris");
+        System.out.println("");
 
-        DailyPower.computePowerUsage(DayPowerData.powerusage_day);
+        System.out.println("E) Strømpris med strømstøtte");
+        System.out.println("");
 
-        System.out.println();
+        System.out.println("F) Strømpris med strømstøtte");
+        System.out.println("");
+
+        System.out.println("G) Norgespris");
+        System.out.println("");
+
+        System.out.println("H) Størst strlmforbruk");
+        System.out.println("");
+
+        System.out.println("I) Gjennomsnitt strømforbruk");
+        System.out.println("");
 
         System.out.println(DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
 
